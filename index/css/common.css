@@ -1,0 +1,97 @@
+/* 1. Reset: 브라우저 기본 스타일 초기화 */
+*, *::before, *::after { box-sizing: border-box; } 
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd { margin: 0; } 
+ul, ol, li { list-style: none; padding: 0; margin:0; } 
+a { text-decoration: none; color: inherit; } 
+button { background: none; border: none; padding: 0; cursor: pointer; } 
+input, button, textarea, select { font: inherit; outline: none; } 
+table { border-collapse: collapse; border-spacing: 0; } 
+img, picture, video, canvas, svg { max-width: 100%; display: block; height: auto; vertical-align: middle; font-style: italic; } 
+
+/* 2. Variables: 디자인 시스템 변수 */
+:root { /* Main Color Palette */
+ --main-color: #00459F; --main-d-color: #00306e; --sub-color: #008C8C; --sub-d-color: #006161; --point-color: #dd5e00; --gray-color: #999999; --dgray-color: #666666; --dark-color:#333333; --bg-color: #f1f5f9; --text-color:#333333; --card-color:#ddd; --aside-color:#1b4377; --white-color:#ffffff; --head-color:#e9f3ff; --fs-12: 1.2rem; --fs-14: 1.4rem; --fs-16: 1.6rem; --fs-18: 1.8rem; --fs-20: 2.0rem; --fs-24: 2.4rem; --fs-28: 2.4rem; --fs-32: 3.2rem; --fs-42: 4.2rem; --fs-48: 4.8rem; --fw-300: 300; --fw-400: 400; --fw-500: 500; --fw-600: 600; --fw-700: 700; --fw-800: 800; --fw-900: 900; } 
+
+/* 3. Base: 기본 태그 설정 */
+html { font-size: 62.5%; -webkit-text-size-adjust: 100%; } 
+body { font-family: 'Pretendard', sans-serif; /* font-size: var(--fs-16); background-color: var(--bg-color); */
+ line-height: 1.6; color: var(--text-color); font-weight: var(--fw-400); word-break: keep-all; overflow-wrap: break-word; -webkit-font-smoothing: antialiased; } 
+textarea { resize: vertical; min-height: 100px; border: 1px solid #ddd; } 
+input { border: 1px solid #ddd; } 
+
+/* Accessibility & UX */
+:focus-visible { outline: 2px solid var(--main-color); outline-offset: 2px; } 
+::selection { background-color: var(--main-color); color: var(--white-color); } 
+
+/* 4. Utilities: 반복 사용 클래스 */
+.fs-12 { font-size: var(--fs-12); } 
+.fs-14 { font-size: var(--fs-14); } 
+.fs-16 { font-size: var(--fs-16); } 
+.fs-18 { font-size: var(--fs-18); } 
+.fs-20 { font-size: var(--fs-20); } 
+.fs-24 { font-size: var(--fs-24); } 
+.fs-32 { font-size: var(--fs-32); } 
+.fs-42 { font-size: var(--fs-42); } 
+.fs-48 { font-size: var(--fs-48); } 
+
+.fw-300 { font-weight: var(--fw-300); } 
+.fw-400 { font-weight: var(--fw-400); } 
+.fw-500 { font-weight: var(--fw-500); } 
+.fw-700 { font-weight: var(--fw-700); } 
+
+/* 콘텐츠 메인 타이틀 (예: 자주하는 질문 관리) */
+.main_deco { font-size: var(--fs-16); font-weight: var(--fw-400); color: var(--text-color); color:var(--main-color); letter-spacing: 50%; line-height: 3; } 
+.main_title_sub { font-size: var(--fs-32); font-weight: var(--fw-600); color: var(--text-color); letter-spacing: -0.02em; } 
+.main_title { font-size: var(--fs-42); font-weight: var(--fw-600); color: var(--text-color); letter-spacing: -0.02em; line-height: 1; } 
+.main_desc { font-size: var(--fs-20); font-weight: var(--fw-400); color:var(--text-color); line-height: 1.4; margin-top: 2rem; } 
+.section_desc { font-size: var(--fs-20); font-weight: var(--fw-400); color:var(--dgray-color); line-height: 1.4; margin-top: 2rem; } 
+.card_title { font-size: var(--fs-24); font-weight: var(--fw-600); color: var(--text-color); } 
+.card_desc { font-size: var(--fs-16); font-weight: var(--fw-400); color:var(--dgray-color); } 
+.logo { font-size: var(--fs-32); font-weight: var(--fw-700); color: var(--text-color); letter-spacing: -0.02em; } 
+.label_txt { font-size: var(--fs-18); font-weight: var(--fw-600); color: var(--text-color); } 
+
+.sub_title { font-size: var(--fs-18); font-weight: var(--fw-800); color: var(--white-color); } 
+.point_txt { font-size: var(--fs-14); font-weight: var(--fw-400); color: var(--white-color); } 
+
+/*미사용*/
+.base_txt { font-size: var(--fs-16); font-weight: var(--fw-400); line-height: 1.6; color: var(--text-color); } 
+
+/* 메인 컬러 버튼 (예: 검색, 저장, 등록) */
+.btn_group { display:block; margin-top: 2rem; } 
+.btn { display: flex; padding:.5rem 1rem; border:1px solid var(--gray-color); border-radius: 8px; margin-left: 1rem; text-align: center; justify-content: center; cursor: pointer; } 
+
+.main_btn { background-color: var(--main-color); border:1px solid var(--main-color); color: var(--white-color); padding: .5rem 2rem; font-size: var(--fs-16); border-radius: 12px; } 
+.main_btn:hover { background-color: var(--main-d-color); } 
+.sub_btn { background-color: var(--sub-color); border:1px solid var(--sub-color); color: var(--white-color); padding: .5rem 1rem; font-size: var(--fs-16); border-radius: 12px;} 
+.sub_btn:hover { background-color: var(--sub-d-color); } 
+.white_btn { background-color: var(--whtie-color); border:1px solid var(--text-color); color: var(--text-color); padding: .5rem 2rem; font-size: var(--fs-16); border-radius: 12px; } 
+
+.visual-btn { font-size: var(--fs-20); padding: 1rem 2rem; border-radius: 50px; display: inline-block; } 
+
+
+/* 태블릿 모바일 이하 반응형 */
+@media screen and (max-width: 1024px) { /*top-bar*/
+.main_deco { font-size: var(--fs-14); } 
+
+.main_title { font-size: var(--fs-32); font-weight: var(--fw-600); color: var(--text-color); letter-spacing: -0.02em; line-height: 1; } 
+.main_title_sub { font-size: var(--fs-28); } 
+.main_desc { font-size: var(--fs-18); line-height: 1.4; margin-top: 1.6rem; padding: 0 2rem; } 
+.visual-btn { font-size: var(--fs-16); padding: 1rem 2rem; border-radius: 50px; display: inline-block; } 
+.main_graphic { padding: 2rem; } 
+.card_title { font-size: var(--fs-20); } 
+.section_desc { font-size: var(--fs-16); margin-top: 1rem; } 
+
+
+}
+
+ @media screen and (max-width: 600px){
+ .section { padding:5rem 0; } 
+ .txt-area { text-align: center; margin-top: 6rem; } 
+
+ .detail-row { display: flex; justify-content: space-around; margin-bottom: 2rem; flex-direction: column; } 
+ .detail-row .label > .card_title { width: 150px; font-size: var(--fs-16); background: #155cb9; font-weight: 400;} 
+ .sec-title { margin-bottom: 4rem; } 
+ .detail-row .data.step-icons { margin-top: 1rem; width:100%; } 
+
+.detail-row .data { width: 100%; font-weight: var(--fw-400); font-size: var(--fs-18); } 
+}
