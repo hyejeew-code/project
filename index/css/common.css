@@ -10,7 +10,37 @@ img, picture, video, canvas, svg { max-width: 100%; display: block; height: auto
 
 /* 2. Variables: 디자인 시스템 변수 */
 :root { /* Main Color Palette */
- --main-color: #00459F; --main-d-color: #00306e; --sub-color: #008C8C; --sub-d-color: #006161; --point-color: #dd5e00; --gray-color: #999999; --dgray-color: #666666; --dark-color:#333333; --bg-color: #f1f5f9; --text-color:#333333; --card-color:#ddd; --aside-color:#1b4377; --white-color:#ffffff; --head-color:#e9f3ff; --fs-12: 1.2rem; --fs-14: 1.4rem; --fs-16: 1.6rem; --fs-18: 1.8rem; --fs-20: 2.0rem; --fs-24: 2.4rem; --fs-28: 2.4rem; --fs-32: 3.2rem; --fs-42: 4.2rem; --fs-48: 4.8rem; --fw-300: 300; --fw-400: 400; --fw-500: 500; --fw-600: 600; --fw-700: 700; --fw-800: 800; --fw-900: 900; } 
+ --main-color: #00459F; 
+ --main-d-color: #00306e; 
+ --sub-color: #008C8C; 
+ --sub-d-color: #006161; 
+ --point-color: #dd5e00; 
+ --gray-color: #999999; 
+ --dgray-color: #666666; 
+ --dark-color:#333333; 
+ --bg-color: #f1f5f9; 
+ --text-color:#333333; 
+ --card-color:#ddd; 
+ --aside-color:#1b4377; 
+ --white-color:#ffffff; 
+ --head-color:#e9f3ff; 
+ --fs-12: 1.2rem; 
+ --fs-14: 1.4rem; 
+ --fs-16: 1.6rem; 
+ --fs-18: 1.8rem; 
+ --fs-20: 2.0rem; 
+ --fs-24: 2.4rem; 
+ --fs-28: 2.4rem; 
+ --fs-32: 3.2rem; 
+ --fs-42: 4.2rem; 
+ --fs-48: 4.8rem; 
+ --fw-300: 300; 
+ --fw-400: 400; 
+ --fw-500: 500; 
+ --fw-600: 600; 
+ --fw-700: 700; 
+ --fw-800: 800; 
+ --fw-900: 900; } 
 
 /* 3. Base: 기본 태그 설정 */
 html { font-size: 62.5%; -webkit-text-size-adjust: 100%; } 
