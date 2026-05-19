@@ -4,70 +4,135 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/font.css" />
-    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="index/css/style.css" />
+    <link rel="stylesheet" href="index/css/font.css" />
+    <link rel="stylesheet" href="index/css/common.css" />
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="index/js/script.js"></script>
   </head>
   <body>
-    <section class="direction-section">
-      <div class="container">
-        <header class="section-header">
-          <span class="sub-title">PROJECT ARCHIVE</span>
-          <h2 class="main-title">
-            <span class="highlight">더 나은 디지털 경험을 설계하는</span><br />
-            4개의 핵심 프로젝트를 소개합니다.
-          </h2>
-          <p class="description">사용자 중심의 사고와 기술적 구현 능력을 바탕으로 최적의 솔루션을 도출한 주요 작업물입니다.</p>
-        </header>
+    <div class="indicator">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+        <span class="dot" data-index="4"></span>
+        <span class="dot" data-index="5"></span>
+    </div>
 
-        <div class="card-grid">
-          <!-- Card 1 -->
-          <div class="card">
-            <a href="../y_flowlab/main.html">
-              <span class="card-tag">플로우랩</span>
-              <h3 class="card-title">실무 중심 교육의 가치를 담은<br />직관적인 원페이지 랜딩 설계</h3>
-              <!-- <div class="card-image">
-                <img src="path/to/image1.png" alt="플로우 개선 일러스트" />
-              </div> -->
-              <p class="card-desc">교육 기획부터 신청까지 이어지는 사용자 여정을 분석하여, 복잡한 정보를 그룹화하고 섹션별 명확한 위계를 통해 전환율을 높인 프로젝트입니다.</p></a
-            >
-          </div>
+    <div class="container">
+        <section class="section sec01">
+            <div class="inner">
+                <h1 class="main-title">PORTFOLIO</h1>
+                <p class="sub-title">구조를 설계하고 구현을 완성하는<br>UI/UX 디자이너 & 퍼블리셔 <strong>우혜지</strong></p>
+            </div>
+        </section>
 
-          <!-- Card 2 -->
-          <div class="card">
-            <a href="../y_flowlab/main.html">
-            <span class="card-tag">몰입과 집중</span>
-            <h3 class="card-title">분산된 정보를 모아<br />꼭 필요한 것만 보여주기</h3>
-            <!-- <div class="card-image">
-              <img src="path/to/image2.png" alt="몰입과 집중 일러스트" />
-            </div> -->
-            <p class="card-desc">비슷한 콘텐츠끼리 모아 노출해서 집중도를 높이고, 서비스 내용을 알고 사용 시도하기 쉽게 해요.</p></a>
-          </div>
+        <section class="section sec02">
+            <div class="inner profile-grid">
+                <div class="profile-intro">
+                    <h2>" 구조를 설계하고 구현을 완성하는<br>디자이너 <strong>우혜지</strong>입니다 "</h2>
+                </div>
+                <div class="profile-details">
+                    <div class="info-box">
+                        <div class="avatar">
+                            <div class="mock-avatar"></div>
+                        </div>
+                        <div class="meta">
+                            <h3>Woo HyeJi</h3>
+                            <p>1990.03.30</p>
+                            <p>010-3125-8751</p>
+                            <p>tbflzos@naver.com</p>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="skill-item">
+                            <span class="badge">Fg</span>
+                            <div>
+                                <h4>Figma</h4>
+                                <p>웹디자인 및 레이아웃, 포트폴리오 작업</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="badge">&lt;&gt;</span>
+                            <div>
+                                <h4>HTML / CSS / jQuery</h4>
+                                <p>웹디자인 및 레이아웃, 포트폴리오 작업</p>
+                            </div>
+                        </div>
+                        <div class="keywords">
+                            <span>#정보 구조 설계</span>
+                            <span>#접근성 개선</span>
+                            <span>#공공기관 유지보수</span>
+                            <span>#기획·개발 협업</span>
+                            <span>#문제 해결</span>
+                            <span>#CMS 제안</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-          <!-- Card 3 -->
-          <div class="card">
-            <a href="../y_flowlab/main.html">
-            <span class="card-tag">탐색 여정 강화</span>
-            <h3 class="card-title">어떤 상품·서비스인지<br />알기 쉽게 드러내기</h3>
-            <!-- <div class="card-image">
-              <img src="path/to/image3.png" alt="탐색 여정 강화 일러스트" />
-            </div> -->
-            <p class="card-desc">어떤 혜택의 콘텐츠가 있는지 고객에게 적절히 전달하고 상품을 자유로이 고를 수 있도록 유도해요.</p></a>
-          </div>
+        <section class="section sec03">
+            <div class="inner project-layout">
+                <div class="project-info">
+                    <span class="num">01.</span>
+                    <h3>대전시립미술관</h3>
+                    <span class="type">개인 프로젝트</span>
+                    <p class="desc">대전시립 미술관을 리디자인한 개인프로젝트입니다. 미술관의 CI 컬러를 사용해 세련된 느낌을 바탕으로 제작하였습니다. 어린이부터 어르신들까지 다양한 연령대를 타깃으로 접근성과 편의성에 초점을 둔 디자인입니다.</p>
+                    <div class="btn-group">
+                        <a href="#" class="btn shadow">UX Planning</a>
+                        <a href="#" class="btn primary">Web Publishing</a>
+                    </div>
+                </div>
+                <div class="project-view">
+                    <div class="mockup-img basic-mock"></div>
+                </div>
+            </div>
+        </section>
 
-          <!-- Card 4 -->
-          <div class="card">
-            <a href="../y_flowlab/main.html">
-            <span class="card-tag">여행의 시작과 끝</span>
-            <h3 class="card-title">코레일톡만의 고유한<br />사용자 경험 제공하기</h3>
-            <!-- <div class="card-image">
-              <img src="path/to/image4.png" alt="여행의 시작과 끝 일러스트" />
-            </div> -->
-            <p class="card-desc">예매부터 각종 서비스까지 여정에 필요한 모든 준비를 코레일톡만으로 가능하도록 해요.</p></a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </body>
+        <section class="section sec04">
+            <div class="inner project-layout row-reverse">
+                <div class="project-info">
+                    <span class="num">02.</span>
+                    <h3>대전시립미술관 누리집 CMS</h3>
+                    <span class="type">개인 프로젝트</span>
+                    <p class="desc">미술관 운영 전반에 분산되어 있던 전시·소장품·예약 정보를 하나의 플랫폼에서 관리할 수 있도록 CMS를 제안했습니다. 반복 업무를 줄이고, 안정적이고 체계적인 운영을 지원하는 것을 목표로 합니다.</p>
+                </div>
+                <div class="project-view">
+                    <div class="mockup-img cms-mock"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section sec05">
+            <div class="inner project-layout">
+                <div class="project-info">
+                    <span class="num">03.</span>
+                    <h3>블랙라벨 홈페이지</h3>
+                    <span class="type">개인 프로젝트</span>
+                    <p class="desc">블랙라벨 홈페이지는 이벤트 기획 스튜디오를 가상의 클라이언트로 설정하여 제작한 웹사이트 프로젝트입니다.<br><br>브랜드의 감성적 아이덴티티와 공간 중심의 이벤트 연출 특징을 시각적으로 전달하고, 사용자가 핵심 서비스 정보와 문의 절차를 빠르게 파악할 수 있도록 전체 구조를 재정비했습니다.</p>
+                </div>
+                <div class="project-view">
+                    <div class="mockup-img black-mock"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section sec06">
+            <div class="inner project-layout row-reverse">
+                <div class="project-info">
+                    <span class="num">04.</span>
+                    <h3>TripMate</h3>
+                    <span class="type">개인 프로젝트</span>
+                    <p class="desc">TripMate는 여행자가 '어디를 갈지' 고민하는 과정을 단순화하기 위해 설계된 개인 맞춤 여행 추천 및 일정 관리 앱입니다. 여행 테마·이동 거리·기간·인원 등 성향 정보를 기반으로 사용자에게 최적화된 여행 코스를 자동 생성하고, 코스 선택부터 일정 등록까지 자연스러운 UX 흐름으로 제공합니다.</p>
+                </div>
+                <div class="project-view">
+                    <div class="mockup-img app-mock"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
 </html>

@@ -1,120 +1,77 @@
-/* --- 기본 설정 --- */
-* { margin: 0; padding: 0; box-sizing: border-box; } 
-body { font-family: 'Pretendard', sans-serif; overflow: hidden; color: #111; } 
-:root {
-  --primary-blue: #3b82f6;
-  --bg-color: #f8faff;
-  --text-dark: #333;
-  --text-gray: #666;
-  --card-bg: #ffffff;
-}
+/* Reset & Common */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; } 
+body, html { width: 100%; height: 100%; overflow: hidden; background-color: #fff; color: #333; } 
 
-.direction-section {
-    background-color: var(--bg-color);
-    font-family: 'Pretendard', sans-serif;
-    text-align: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* Fullpage Layout */
+.container { width: 100%; height: 100%; transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1); } 
+.section { width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; position: relative; padding: 0 10%; } 
+.inner { width: 100%; max-width: 1200px; margin: 0 auto; } 
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+/* Indicators */
+.indicator { position: fixed; left: 30px; /* 왼쪽 고정으로 변경 */
+ top: 50%; transform: translateY(-50%); z-index: 100; display: flex; flex-direction: column; gap: 15px; } 
+.dot { width: 10px; height: 10px; background-color: rgba(0,0,0,0.2); border-radius: 50%; cursor: pointer; transition: all 0.3s ease; } 
+.dot.active { background-color: #2b6cb0; transform: scale(1.3); } 
 
-.section-header {
-  margin-bottom: 50px;
-}
+/* Section Colors & Specific Styles */
+.sec01 { background-color: #ffffff; text-align: center; } 
+.sec01 .main-title { font-size: 4rem; color: #2b6cb0; letter-spacing: 2px; margin-bottom: 20px; } 
+.sec01 .sub-title { font-size: 1.25rem; line-height: 1.8; color: #4a5568; } 
+.sec01 .sub-title strong { color: #2b6cb0; } 
 
-.sub-title {
-  color: var(--primary-blue);
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
+.sec02 { background-color: #ffffff; } 
+.profile-grid { display: flex; flex-direction: column; gap: 50px; } 
+.profile-intro h2 { font-size: 2rem; color: #718096; font-weight: 400; line-height: 1.5; } 
+.profile-intro h2 strong { color: #2b6cb0; font-weight: 700; } 
+.profile-details { display: flex; gap: 80px; } 
+.info-box { display: flex; align-items: center; gap: 25px; min-width: 300px; } 
+.mock-avatar { width: 100px; height: 100px; background-color: #e2e8f0; border-radius: 50%; } 
+.meta h3 { font-size: 1.5rem; margin-bottom: 10px; } 
+.meta p { color: #718096; font-size: 0.95rem; margin-bottom: 4px; } 
 
-.main-title {
-  font-size: 32px;
-  font-weight: 700;
-  margin: 15px 0;
-  line-height: 1.4;
-  color: var(--text-dark);
-}
+.skill-box { display: flex; flex-direction: column; gap: 20px; flex-grow: 1; } 
+.skill-item { display: flex; gap: 15px; align-items: center; } 
+.badge { width: 45px; height: 45px; border: 1px solid #cbd5e0; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; } 
+.skill-item h4 { font-size: 1.1rem; margin-bottom: 2px; } 
+.skill-item p { color: #718096; font-size: 0.9rem; } 
+.keywords { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; } 
+.keywords span { padding: 8px 16px; background: #f7fafc; border-radius: 30px; border: 1px solid #e2e8f0; font-size: 0.85rem; color: #4a5568; box-shadow: 0 2px 5px rgba(0,0,0,0.03); } 
 
-.main-title .highlight {
-  color: var(--primary-blue);
-}
+/* Project Templates */
+.project-layout { display: flex; align-items: center; justify-content: space-between; gap: 50px; } 
+.project-layout.row-reverse { flex-direction: row-reverse; } 
+.project-info { flex: 1; max-width: 450px; } 
+.project-view { flex: 1.2; display: flex; justify-content: center; } 
 
-.description {
-  color: var(--text-gray);
-  font-size: 16px;
-}
+.project-info .num { font-size: 1.5rem; font-weight: bold; display: block; margin-bottom: 5px; } 
+.project-info h3 { font-size: 2.2rem; margin-bottom: 5px; } 
+.project-info .type { color: #a0aec0; font-size: 0.95rem; display: block; margin-bottom: 25px; } 
+.project-info .desc { font-size: 0.95rem; line-height: 1.7; color: #4a5568; word-break: keep-all; } 
 
-/* Card Layout */
-.card-grid {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+/* Buttons */
+.btn-group { display: flex; gap: 15px; margin-top: 30px; } 
+.btn { padding: 12px 28px; border-radius: 30px; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: all 0.3s; } 
+.btn.shadow { background: #fff; color: #333; box-shadow: 0 4px 10px rgba(0,0,0,0.1); } 
+.btn.primary { background: #9b2c2c; color: #fff; } 
 
-.card {
-  background: var(--card-bg);
-  border-radius: 12px;
-  padding: 30px 20px;
-  flex: 1;
-  min-width: 260px;
-  max-width: 280px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* Mockup Areas (배경 그라데이션 및 매칭) */
+.mockup-img { width: 100%; height: 450px; border-radius: 12px; background-size: cover; background-position: center; } 
+.sec03 { background-color: #fcf9f5; } 
+.sec03 .project-info .num { color: #9b2c2c; } 
+.sec03 .mockup-img { background-color: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.05); } 
 
-.card-tag {
-  background: #eef4ff;
-  color: var(--primary-blue);
-  padding: 4px 12px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
+.sec04 { background-color: #3f4064; color: #fff; } 
+.sec04 .project-info .desc { color: #cbd5e0; } 
+.sec04 .mockup-img { background-color: rgba(255,255,255,0.1); } 
 
-.card-title {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  color: var(--text-dark);
-}
+.sec05 { background-color: #7c53a2; color: #fff; } 
+.sec05 .project-info .desc { color: #e2e8f0; } 
+.sec05 .mockup-img { background-color: rgba(0,0,0,0.1); } 
 
-.card-image {
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-}
+.sec06 { background-color: #2cb5b5; color: #fff; } 
+.sec06 .project-info .desc { color: #e2e8f0; } 
+.sec06 .mockup-img { background-color: rgba(255,255,255,0.1); } 
 
-.card-image img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.card-desc {
-  font-size: 13px;
-  color: var(--text-gray);
-  line-height: 1.6;
-  word-break: keep-all;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .card {
-    max-width: 100%;
-  }
-}
+/* White text modifications for dark sections */
+.sec04 .dot, .sec05 .dot, .sec06 .dot { background-color: rgba(255,255,255,0.3); } 
+.sec04 .dot.active, .sec05 .dot.active, .sec06 .dot.active { background-color: #fff; } 
